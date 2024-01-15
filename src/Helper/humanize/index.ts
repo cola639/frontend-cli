@@ -10,6 +10,13 @@ export const HumanizeChoices = {
                     description: "Creates a React CRA project",
                     value: choice,
                 };
+            case "react-h5-template":
+                return {
+                    title: "React H5 Template",
+                    description: "Creates a React H5 TS template",
+                    value: choice,
+                };
+
             // case "nextjs":
             //     return {
             //         title: "NextJS",

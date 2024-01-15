@@ -31,10 +31,7 @@ export const get_source: GetSourceFn = async (source, branch, downloadType) => {
         source ?? "https://github.com/cola639/frontend-cli-plugins.git";
     // source ?? "https://github.com/pankod/superplate-core-plugins.git";
 
-    console.log(
-        "🚀 >> constget_source:GetSourceFn= >> sourcePath:",
-        sourcePath,
-    );
+    // console.log("🚀 sourcePath >>", sourcePath);
     const isPathExists = await FSHelper.IsPathExists(sourcePath);
     if (isPathExists) {
         /**

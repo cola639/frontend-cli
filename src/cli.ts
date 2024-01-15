@@ -120,7 +120,7 @@ const cli = async (): Promise<void> => {
 
     let { path: sourcePath } = source;
     const { error: sourceError } = source;
-    console.log("🚀 >> cli >> sourcePath sourceError:", sourcePath);
+    // console.log("🚀 sourceError:", sourcePath);
 
     if (sourceError) {
         console.error(`${chalk.bold`${sourceError}`}`);
