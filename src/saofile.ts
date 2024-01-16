@@ -41,34 +41,35 @@ const saoConfig: GeneratorConfig = {
         const packageManagerChoices = get_potential_package_managers();
 
         return [
-            // {
-            //     type: "input",
-            //     name: "name",
-            //     message: "What would you like to name your project?:",
-            //     default: appName,
-            //     validate: (name: string) => {
-            //         const appNameValidation = validate(name);
-            //         if (appNameValidation.errors) {
-            //             return false;
-            //         }
-            //         return true;
-            //     },
-            // },
+            {
+                type: "input",
+                name: "name",
+                message: "What would you like to name your project?:",
+                default: appName,
+                validate: (name: string) => {
+                    const appNameValidation = validate(name);
+                    if (appNameValidation.errors) {
+                        return false;
+                    }
+                    return true;
+                },
+            },
+            // plugins项目 prompts选择项
             // ...(sourcePrompts?.prompts ?? []).map((el: ProjectPrompt) => ({
             //     ...el,
             //     default: presetAnswers?.[el.name] ?? el.default,
             // })),
-            // {
-            //     type: "select",
-            //     name: "npmClient",
-            //     message: "Choose a package manager:",
-            //     choices: packageManagerChoices,
-            //     default:
-            //         packageManagerChoices.length === 1
-            //             ? packageManagerChoices[0].name
-            //             : undefined,
-            //     skip: () => packageManagerChoices.length === 1,
-            // },
+            {
+                type: "select",
+                name: "npmClient",
+                message: "Choose a package manager:",
+                choices: packageManagerChoices,
+                default:
+                    packageManagerChoices.length === 1
+                        ? packageManagerChoices[0].name
+                        : undefined,
+                skip: () => packageManagerChoices.length === 1,
+            },
         ];
     },
     data(sao) {

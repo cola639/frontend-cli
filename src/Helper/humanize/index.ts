@@ -3,6 +3,7 @@ export const HumanizeChoices = {
         choice: string,
         projectType?: string,
     ): { title: string; description: string; value: string } => {
+        // choice core-plugins文件名
         switch (choice) {
             case "react":
                 return {
